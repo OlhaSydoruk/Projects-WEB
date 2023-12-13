@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tenant{% endblock %}
+
+{% block body %}
+    <h1>Tenant</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ tenant.id }}</td>
+            </tr>
+            <tr>
+                <th>Titel</th>
+                <td>{{ tenant.titel }}</td>
+            </tr>
+            <tr>
+                <th>StreetAndNumber</th>
+                <td>{{ tenant.streetAndNumber }}</td>
+            </tr>
+            <tr>
+                <th>CountryCode</th>
+                <td>{{ tenant.CountryCode }}</td>
+            </tr>
+            <tr>
+                <th>PLZ</th>
+                <td>{{ tenant.PLZ }}</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>{{ tenant.country }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ tenant.phone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ tenant.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_tenant_index') }}">back to list</a>
+
+    <a href="{{ path('app_tenant_edit', {'id': tenant.id}) }}">edit</a>
+
+    {{ include('tenant/_delete_form.html.Twig') }}
+{% endblock %}

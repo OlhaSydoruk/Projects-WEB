@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tenant index{% endblock %}
+
+{% block body %}
+    <h1>Tenant index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titel</th>
+                <th>StreetAndNumber</th>
+                <th>CountryCode</th>
+                <th>PLZ</th>
+                <th>Country</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for tenant in tenants %}
+            <tr>
+                <td>{{ tenant.id }}</td>
+                <td>{{ tenant.titel }}</td>
+                <td>{{ tenant.streetAndNumber }}</td>
+                <td>{{ tenant.CountryCode }}</td>
+                <td>{{ tenant.PLZ }}</td>
+                <td>{{ tenant.country }}</td>
+                <td>{{ tenant.phone }}</td>
+                <td>{{ tenant.email }}</td>
+                <td>
+                    <a href="{{ path('app_tenant_show', {'id': tenant.id}) }}">show</a>
+                    <a href="{{ path('app_tenant_edit', {'id': tenant.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_tenant_new') }}">Create new</a>
+{% endblock %}

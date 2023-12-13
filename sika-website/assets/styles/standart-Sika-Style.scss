@@ -1,0 +1,90 @@
+
+
+
+.page-padding{
+  padding-left: $page-left-padding;
+  padding-right: $page-right-padding;
+}
+
+  .font-light{
+  font-family: $klavika-light;
+}
+
+  .error-message{
+    color : red !important;
+  }
+
+.text-block{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @include phone {
+      & {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+}
+
+
+.shadow {
+  -webkit-box-shadow: 1px 7px 6px -5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 7px 6px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 7px 6px -5px rgba(0, 0, 0, 0.25);
+}
+.bg-yellow{
+  background-color: $sika-yellow;
+}
+.title{
+  margin-bottom: 2.5rem;
+}
+
+.sika-link{
+  color: white;
+  text-decoration-color: $sika-yellow;
+  transition: transform 0.2s;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.sika-link:hover {
+  background-color: $sika-yellow;
+
+}
+
+.hacker-image-container{
+  position: relative;
+  .overlay{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    bottom: 7%;
+    left: 10%;
+    padding :4%;
+
+
+    @include phone {
+      & {
+        font-size: medium;
+        left: 13%;
+        right: 13%;
+        text-align: center;
+        bottom: 15%;
+      }
+    }
+  }
+}
+
+
+.emergency-form{
+  padding-top: 4.06rem;
+  padding-bottom: 4.06rem;
+  &-title{
+    padding-top: 0;
+    padding-bottom: 0.95rem;
+  }
+  @include phone{
+    &-text{
+      padding-top: 1rem;
+    }
+  }
+}

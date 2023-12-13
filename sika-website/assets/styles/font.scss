@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: 'Klavika Light';
+    src: url('/assets/fonts/klavika-light.woff') format('woff');
+    src: url('/assets/fonts/klavika-light.woff2') format('woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face{
+    font-family: 'Klavika Medium';
+    src: url('/assets/fonts/Klavika-Medium.woff') format('woff');
+
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, span, button {
+    font-family: "Klavika Medium", sans-serif;
+}
+p, h3, a, label, input,table,td {
+    font-family: "Klavika Light", sans-serif;
+}

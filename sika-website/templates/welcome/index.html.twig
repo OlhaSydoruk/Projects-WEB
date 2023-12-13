@@ -1,0 +1,351 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Hacker attack. First steps{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    {# TODO: font awesome link tag durch npm package ersetzen #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-...">
+{% endblock %}
+
+{% block body %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <body>
+    {% include 'partial/_header.html.Twig' %}
+    <section>
+        <div class="container-fluid">
+            <div class="row d-flex flex-column">
+                <div class="col-12">
+                    <div class="hacker-image-container">
+                        <div class="w-auto ">
+                            <img src="{{ asset('build/images/Hacker.jpg') }}" class="img-fluid" alt="hacker">
+                        </div>
+                        <div class="overlay d-flex align-items-center justify-content-center ">
+                            <h1 class="display-5 text-dark ">Welcome to Sika Crisis Website</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col page-padding text-block">
+                    <div class="title">
+                        <h1>What is the problem? </h1>
+                    </div>
+                    <div class="row  justify-content-between">
+                        <div class="col-sm-11 col-md-6 ">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor, dignissim sit amet,
+                                adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit.
+                                YYYYYYyyyyyyySed non risus. Suspendisse lectus tortor,
+                                dignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor,
+
+                            </p>
+                        </div>
+
+                       <div class="read-more appear ">
+                            <div class="text-end">
+                               <a class="sika-link text-dark" data-bs-toggle="collapse" href="#read-more" role="button" aria-expanded="false" aria-controls="read-more">
+                                    read more
+                                </a>
+                           </div>
+
+                            <div class="collapse" id="read-more">
+                                    <div class="col-sm-11 col-md-6 ">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Sed non risus. Suspendisse lectus tortor, dignissim sit
+                                            amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum
+                                            dolor sit amet, consectetur adipiscing elit.
+                                            YYYYYYyyyyyyySed non risus. Suspendisse lectus tortor,
+                                            dignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Sed non risus. Suspendisse lectus tortor,
+                                            dignissim sit amet, adipiscing nec, ultricies sed, dolor
+
+                                        </p>
+                                </div>
+                            </div>
+                       </div>
+
+
+
+                        <div class=" col-md-6  disappear">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                YYYYYYyyyyyyySed non risus. Suspendisse lectus tortor,
+                                dignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor,
+                                dignissim sit amet, adipiscing nec, ultricies sed, dolor
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                {% if showSikaYellowLine %}
+                <div class="yellow-line bg-primary col" >
+                    <div>
+                            <h1>Status Updates</h1>
+                    </div>
+                </div>
+                {% endif %}
+
+
+
+
+                <div class="col page-padding hidden">
+                    <div class="hidden-block">
+                        <button class="btn d-flex justify-content-between toggleButton" type="button"  data-bs-toggle="collapse" data-bs-target="#collapseInfoButton1" aria-expanded="false">
+                            <b class="text-dark">Montag</b>
+
+                            <div class="icon">
+                                <div class="first-stick"></div>
+                                <div class="second-stick"></div>
+                            </div>
+
+                        </button>
+
+                        <div class="collapse hidden-block-text" id="collapseInfoButton1">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor, dignissim sit amet,
+                                adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                YYYYYYyyyyyyySed non risus. Suspendisse lectus tortor,
+                                dignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor,</p>
+                        </div>
+                    </div>
+
+                    <div class="hidden-block">
+                        <button class="btn d-flex justify-content-between toggleButton "  type="button" data-bs-toggle="collapse" data-bs-target="#collapseInfoButton2" aria-expanded="false">
+                            <b class="text-dark">Montag</b>
+
+                            <div class="icon">
+                                <div class="first-stick"></div>
+                                <div class="second-stick"></div>
+                            </div>
+                        </button>
+
+                        <div class="collapse hidden-block-button-text" id="collapseInfoButton2">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor, dignissim sit amet,
+                                adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                YYYYYYyyyyyyySed non risus. Suspendisse lectus tortor,
+                                dignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor,</p>
+                        </div>
+                    </div>
+
+                    <div class="hidden-block">
+                        <button class="btn d-flex justify-content-between toggleButton" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInfoButton3" aria-expanded="false">
+                            <b class="text-dark">Montag</b>
+                            <div class="icon">
+                                <div class="first-stick"></div>
+                                <div class="second-stick"></div>
+                            </div>
+                        </button>
+
+                        <div class="collapse hidden-block-button-text" id="collapseInfoButton3">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor, dignissim sit amet,
+                                adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                YYYYYYyyyyyyySed non risus. Suspendisse lectus tortor,
+                                dignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor,</p>
+                        </div>
+                    </div>
+
+                    <div class="hidden-block">
+                        <button class="btn d-flex justify-content-between toggleButton" type="button" data-bs-toggle="collapse"  data-bs-target="#collapseInfoButton4" aria-expanded="false">
+                            <b class="text-dark">Montag</b>
+                            <div class="icon">
+                                <div class="first-stick"></div>
+                                <div class="second-stick"></div>
+                            </div>
+                        </button>
+
+                        <div class="collapse hidden-block-button-text" id="collapseInfoButton4">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor, dignissim sit amet,
+                                adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                YYYYYYyyyyyyySed non risus. Suspendisse lectus tortor,
+                                dignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor,</p>
+                        </div>
+                    </div>
+
+                    <div class="hidden-block">
+                        <button class="btn d-flex justify-content-between toggleButton" type="button"  data-bs-toggle="collapse" data-bs-target="#collapseInfoButton5" aria-expanded="false">
+                            <b class="text-dark">Montag</b>
+                            <div class="icon">
+                                <div class="first-stick"></div>
+                                <div class="second-stick"></div>
+                            </div>
+                        </button>
+
+                        <div class="collapse hidden-block-button-text" id="collapseInfoButton5">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor, dignissim sit amet,
+                                adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                YYYYYYyyyyyyySed non risus. Suspendisse lectus tortor,
+                                dignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor,</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col bg-light">
+                    <div class="page-padding text-block">
+                        <div>
+                            <h1>What now? </h1>
+                        </div>
+                        <div class="row justify-content-between">
+                            <div class="col-11 col-md-6">
+                                <div>
+                                    <ol class="rect">
+                                        <li>
+                                            <div>
+                                                <span>Lorem ipsum dolor m ipsum</span>
+                                                <p>sit ametndisse lectus tortor etndisse lectus tort</p>
+                                            </div>
+
+                                            <p class="rect-hidden">sit ametndisse lectus tortor etndisse lectus tort</p>
+
+                                        </li>
+
+                                        <li>
+                                            <div>
+                                                <span>Lorem ipsum dolor m ipsum</span>
+                                                <p>sit ametndisse lectus tortor etndisse lectus tort</p>
+                                            </div>
+
+                                            <p class="rect-hidden">sit ametndisse lectus tortor etndisse lectus tort</p>
+
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span>Lorem ipsum dolor m ipsum</span>
+                                                <p>sit ametndisse lectus tortor etndisse lectus tort</p>
+                                            </div>
+
+                                            <p class="rect-hidden">sit ametndisse lectus tortor etndisse lectus tort</p>
+
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="col-11 col-md-6">
+                                <div>
+                                    <ol class="rect">
+                                        <li>
+                                            <div>
+                                                <span>Lorem ipsum dolor m ipsum</span>
+                                                <p>sit ametndisse lectus tortor etndisse lectus tort</p>
+                                            </div>
+
+                                            <p class="rect-hidden">sit ametndisse lectus tortor etndisse lectus tort</p>
+
+                                        </li>
+
+                                        <li>
+                                            <div>
+                                                <span>Lorem ipsum dolor m ipsum</span>
+                                                <p>sit ametndisse lectus tortor etndisse lectus tort</p>
+                                            </div>
+
+                                            <p class="rect-hidden">sit ametndisse lectus tortor etndisse lectus tort</p>
+
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span>Lorem ipsum dolor m ipsum</span>
+                                                <p>sit ametndisse lectus <to></to>rtor etndisse lectus tort</p>
+                                            </div>
+
+                                            <p class="rect-hidden">sit ametndisse lectus tortor etndisse lectus tort</p>
+
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            {% include 'partial/_downloads.html.Twig' %}
+
+            {% if showEmergencyForm %}
+
+                <div class="col-12 bg-primary emergency-form">
+                    <div class=" col text-center ">
+                        <div class="emergency-form-title">
+                            <h1>Survey</h1>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class=" col-md-8 emergency-form-text">
+                            <p class="text-center">
+                                Being prepared for a major security incdignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class=" col text-over-form d-flex justify-content-center">
+                                <div class="emergency-form-check">
+                                    <input  type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label  for="flexRadioDefault1">
+                                        Radio Button
+                                    </label>
+                            </div>
+                            <div class="emergency-form-check">
+                                <input  type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label  for="flexRadioDefault1">
+                                    Radio Button
+                                </label>
+                            </div>
+
+                        </div>
+                </div>
+                    <div class=" d-flex justify-content-center align-items-center pb-4" >
+                        <iframe width="640px" height="480px"
+                                src="https://forms.office.com/Pages/ResponsePage.aspx?id=iGqK65PZUE608K2j3554-JOjAwbs_vZEunnR6a732clUQ09HU000U05HSlNEOENDOFJQVlZaUzdRVy4u&embed=true"
+                                frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh"
+                                allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            {% endif %}
+
+            </div>
+
+
+    </section>
+
+    {% include 'partial/_footer.html.Twig' %}
+
+    </body>
+
+{% endblock %}

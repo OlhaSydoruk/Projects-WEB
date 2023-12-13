@@ -1,0 +1,19 @@
+{% extends '../base.html.Twig' %}
+
+{% block title %}Error!{% endblock %}
+
+{% block body %}
+    <!--
+
+    <link rel="stylesheet" href="{{ asset('css/main.scss') }}">
+-->
+
+    <div class="container-fluid alert alert-danger">
+
+        <h1 class=text-danger">Error</h1>
+
+        <h2 class=text-danger"> {{ errorMassage }}</h2>
+
+    </div>
+
+{% endblock %}

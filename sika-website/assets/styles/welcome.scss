@@ -1,0 +1,208 @@
+.hidden{
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+
+    &-block {
+        padding-bottom: 1.25rem;
+
+        button {
+            width: 100%;
+            background-color: #F5F5F5;
+            border-radius: 0;
+            text-align: left;
+            padding-bottom: 0.75rem;
+            padding-top: 0.75rem;
+            transition: background-color .3s;
+
+            b {
+                padding-left: 1rem;
+            }
+
+        }
+
+        button:hover {
+            background-color: $sika-yellow;
+        }
+
+        .first-stick, .second-stick {
+            position: absolute;
+            border-radius: 3px;
+            background: black;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: 400ms all ease-out;
+            transition: 400ms all ease-out;
+        }
+
+        .first-stick {
+            top: 8.125px;
+            left: 2.5px;
+            right: 2.5px;
+            height: 2.5px;
+        }
+
+        .second-stick{
+            top: 2.5px;
+            left: 8.125px;
+            bottom: 2.5px;
+            width: 2.5px;
+        }
+
+        .icon {
+            position: relative;
+            width: 18.75px;
+            height: 18.75px;
+
+
+        }
+
+    }
+
+        &-text{
+            padding-top: 1rem;
+            padding-left: 2.12rem;
+            padding-right: 1rem;
+        }
+
+    }
+
+// icon + -
+
+
+
+
+/*@include media-breakpoint-down(sm)*/
+
+.read-more{
+    @extend .appear;
+}
+@include phone {
+    .disappear{
+        display: none;
+    }
+}
+
+.yellow-line{
+    padding-left: $page-left-padding;
+    padding-bottom: 1.13rem;
+    padding-top: 1.56rem;
+
+    @include phone{
+        & {
+            padding-left: 3%;
+            div {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.rect{
+    counter-reset: li;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    & div {
+        position: relative;
+        display: block;
+        padding: .4em .4em .4em .8em;
+        margin-top: 1.5em;
+        margin-left: 2.8em;
+        background: none ;
+        color: black;
+        text-decoration: none;
+        transition: all .3s ease-out;
+
+        &:hover {background: #DCDDE1;}
+        &:before {
+            content: counter(li);
+            counter-increment: li;
+            position: absolute;
+            left: -3em;
+            top: 65%;
+            margin-top: -1.8em;
+            background: $sika-yellow;
+            height: 2.5em;
+            width: 2.5em;
+            line-height: 2.3em;
+            text-align: center;
+            font-weight: bold;
+
+            @include phone{
+                &{
+                    margin-top: -1.3em;
+                }
+            }
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            border: .5em solid transparent;
+            left: -1em;
+            top: 50%;
+            margin-top: -.5em;
+            transition: all .3s ease-out;
+        }
+        &:hover:after {
+            left: -.5em;
+            border-left-color:$sika-yellow;
+        }
+
+        @include phone{
+            & p{
+                display: none;
+            }
+    }
+
+    p{
+        margin: 0;
+        padding: 0;
+
+        }
+    }
+    &-hidden{
+     display: none;
+
+        @include phone{
+            &{
+                padding-top: 1rem;
+                display: block;
+            }
+        }
+    }
+}
+
+.appear{
+        display: none;
+    }  @include phone{
+         .appear{
+            display: block;
+         }
+       }
+
+
+
+@include phone{
+        .download-elem{
+            padding-right: 0.2em;
+            padding-left: 0.2em;
+            text-align: center;
+        }
+
+    }
+
+
+.emergency-form-check{
+    margin-right: 1rem;
+    padding-left: 2.7rem ;
+}
+
+
+
+@include phone{
+    .text-over-form{
+        padding-top: 1rem;
+    }
+}

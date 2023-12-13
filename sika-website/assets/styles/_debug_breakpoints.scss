@@ -1,0 +1,62 @@
+// Debug Styles
+body::before {
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 200px;
+    right: 0;
+    z-index: 9999;
+    white-space: pre;
+    font-size: 16px;
+    margin-bottom: 36px;
+}
+
+// XXL - Large-Desktop
+@include media-breakpoint-only(xxl) {
+    body::before {
+        content: ".XXL Extra large \a(min. #{map-get($grid-breakpoints, xxl)})";
+        background: rgba(gray, 0.8);
+    }
+}
+
+// XL - Large-Desktop
+@include media-breakpoint-only(xl) {
+    body::before {
+        content: ".XL Extra large \a(#{map-get($grid-breakpoints, xl)} - #{map-get($grid-breakpoints, xxl)-1})";
+        background: rgba(yellow, 0.8);
+    }
+}
+
+// LG - Desktop
+@include media-breakpoint-only(lg) {
+    body::before {
+        content: ".LG Large \a(#{map-get($grid-breakpoints, lg)} - #{map-get($grid-breakpoints, xl)-1})";
+        background: rgba(green, 0.8);
+    }
+}
+
+// MD - Desktop
+@include media-breakpoint-only(md) {
+    body::before {
+        content: ".MD Medium \a(#{map-get($grid-breakpoints, md)} - #{map-get($grid-breakpoints, lg)-1})";
+        background: rgba(orange, 0.8);
+    }
+}
+
+// SM - Desktop
+@include media-breakpoint-only(sm) {
+    body::before {
+        content: ".SM Small \a(#{map-get($grid-breakpoints, sm)} - #{map-get($grid-breakpoints, md)-1})";
+        background: rgba(blue, 0.3);
+    }
+}
+
+// XL - Large-Desktop
+@include media-breakpoint-only(xs) {
+    body::before {
+        content: ".XS Extra small \a(max. #{map-get($grid-breakpoints, sm)-1})";
+        background: rgba(pink, 0.8);
+    }
+}

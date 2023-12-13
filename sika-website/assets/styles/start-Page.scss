@@ -1,0 +1,53 @@
+
+.mh{
+    max-height: 10%;
+}
+
+.rectangle {
+    counter-reset: li;
+    list-style: none;
+    padding: 0;
+
+    span {
+        position: relative;
+        display: block;
+        padding: .4em .4em .4em .8em;
+        margin-top: 1.5em;
+        margin-left: 2.5em;
+        background: none ;
+        color: black;
+        text-decoration: none;
+        transition: all .3s ease-out;
+
+
+        &:hover {background: #DCDDE1;}
+        &:before {
+            content: counter(li);
+            counter-increment: li;
+            position: absolute;
+            left: -2.5em;
+            top: 10%;
+            background: $sika-yellow;
+            height: 2em;
+            width: 2em;
+            line-height: 2em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            border: .5em solid transparent;
+            left: -1em;
+            top: 50%;
+            margin-top: -.5em;
+            transition: all .3s ease-out;
+        }
+        &:hover:after {
+            left: -.5em;
+            border-left-color:$sika-yellow;
+        }
+    }
+}
+

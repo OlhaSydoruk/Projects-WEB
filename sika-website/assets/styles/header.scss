@@ -1,0 +1,13 @@
+.heading{
+  color: $sika-light-grey;
+}
+.warning {
+  padding-top: 2rem;
+  background-color: $sika-yellow;
+  padding-left: $page-left-padding;
+
+  .h-wrapper {
+    padding-top: 3%;
+    padding-bottom: 1.75%;
+  }
+}

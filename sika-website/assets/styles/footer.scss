@@ -1,0 +1,93 @@
+
+//TODO
+.footer-container-padding{
+    @extend .page-padding;
+    padding-top: 1.19rem;
+}
+
+
+.info-footer {
+    background: $footer-grey;
+    color: $footer-light-grey;
+
+    .scroll-top-box {
+        width: 3rem;
+        height: 2rem;
+        position: absolute;
+        top: -0.5rem;
+        background-color: $sika-yellow;
+        right: 10%;
+
+
+
+        .scroll-top {
+            background-color: $sika-yellow;
+            border: none;
+            border-radius: 0;
+            padding-left: 0.7em;
+            padding-right: 0.7em;
+        }
+
+    }
+
+    &-container {
+        margin-top: 4%;
+        margin-bottom: 7%;
+
+        &-inscription {
+            font-family: $klavika-medium;
+        }
+
+        table {
+            border-collapse: collapse; /* Убирает внешние границы */
+            td, tr {
+                margin-left: 0;
+
+            }
+        }
+
+
+        @include phone {
+            & {
+                margin-top: 4%;
+                margin-bottom: 0
+            }
+        }
+    }
+
+    &-end {
+        background: $footer-dark;
+        padding: 1.13rem 10%;
+        color: $footer-light-grey;
+
+        &-info {
+            text-align: center;
+            border-right: 1px solid white;
+            font-family: $klavika-light;
+        }
+
+
+        @include phone {
+            & {
+                border-right: none;
+            }
+        }
+    }
+
+
+    &-logo {
+        padding-bottom: 0.4rem;
+        width: 90%;
+        height: auto;
+
+        @include phone {
+            & {
+                padding-bottom: 2.5rem;
+                padding-left: 14%;
+            }
+        }
+    }
+
+}
+
+

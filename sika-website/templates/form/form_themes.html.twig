@@ -1,0 +1,10 @@
+{# form_themes.html.Twig #}
+{% extends 'form_div_layout.html.Twig' %}
+
+{% block form_errors %}
+    {% if errors|length >0  %}
+        <div class="error-block text-danger">
+            {% for  error in errors %}{{ error.message }}{% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}

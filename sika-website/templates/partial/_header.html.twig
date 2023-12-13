@@ -1,0 +1,32 @@
+<!-- _header.html.Twig -->
+<link rel="stylesheet" href="{{ asset('css/header.scss') }}">
+<link rel="stylesheet" href="{{ asset('css/font.scss') }}">
+<header id="header" class="bg-white">
+    <div class="container-fluid">
+
+        <div>
+            <h2 class="heading">Startpage/ Heroimage </h2>
+        </div>
+
+        <div class="warning">
+            <div class="row">
+                <div class="col-2 col-md-1 mh d-flex justify-content-end align-items-center">
+                    <div>
+                        <img  src="{{ asset('build/images/Logo.svg') }}"  class="img-fluid"  alt="SIKA">
+                    </div>
+
+                </div>
+
+                <div class="col h-wrapper">
+                    <h3> Emergency Website</h3>
+                </div>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <div class="col-3 bg-black d-flex align-items-center">
+                        <a href ="{{ path('admin') }}"> Admin</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+</header>

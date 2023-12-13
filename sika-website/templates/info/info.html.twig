@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+
+     <body>
+    {% include 'partial/_header.html.Twig' %}
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="hacker-image-container">
+                        <div class="w-auto ">
+                            <img src="{{ asset('build/images/Hacker.jpg') }}" class="img-fluid" alt="hacker">
+                        </div>
+                        <div class="overlay d-flex align-items-center justify-content-center ">
+                            <h1 class="display-4 text-dark">Cyber Emergency Alert</h1>
+                            <a id="top"></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="col-12 page-padding">
+                    <div class="text-block">
+                        <div class="title">
+                            <h1>Cyber Emergency Communication Test Page</h1>
+                        </div>
+                        <div class="col-11 col-md-8">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor, dignissim sit amet,
+                                adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor
+                                sit amet, consectetur adipiscing elit.
+                                YYYYYYyyyyyyySed non risus. Suspendisse lectus tortor,
+                                dignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor,
+                                dignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor,
+                                dignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor,
+                                dignissim sit amet, adipiscing nec, ultricies sed, dolor
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class=" col-12  bg-light" >
+                        <div class="page-padding text-block">
+                            <div class="title">
+                                <h1>The steps in a Cyber Emergency situation are as follows:</h1>
+                            </div>
+                        <div class="full-width col-11 col-md-8">
+                            <div>
+                                <ol class="rectangle">
+                                    <li class="li-square"><span>Lorem ipsum dolor sit amet</span></li>
+                                    <li class="li-square"><span>Lorem ipsum dolor sit amet</span></li>
+                                    <li class="li-square"><span>Lorem ipsum dolor sit amet</span></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 bg-primary emergency-form">
+                    <div class=" col text-center ">
+                        <div class=" emergency-form-title">
+                            <h1>Sika Cyber Emergency Preparedness</h1>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class=" col-md-8 emergency-form-text">
+                            <p class="text-center">
+                                Being prepared for a major security incdignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sed non risus. Suspendisse lectus tortor
+                            </p>
+                            <p class="text-center">
+                                Being prepared for a major security incdignissim sit amet, adipiscing nec, ultricies sed, dolor
+                                Lorem ipsum dolor sit amet,
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class=" d-flex justify-content-center align-items-center pb-4" >
+                            <iframe width="640px" height="480px"
+                                    src="https://forms.office.com/Pages/ResponsePage.aspx?id=iGqK65PZUE608K2j3554-JOjAwbs_vZEunnR6a732clUQ09HU000U05HSlNEOENDOFJQVlZaUzdRVy4u&embed=true"
+                                    frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh"
+                                    allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    {% include 'partial/_footer.html.Twig' %}
+
+    </body>
+{% endblock %}
